@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AssemblyName>PortalReflection.Console</AssemblyName>
+    <RootNamespace>PortalReflection.Console</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Assets\css\styles.css" />
+    <None Remove="Assets\js\main.js" />
+    <None Remove="View\Cambio\Calculo.html" />
+    <None Remove="View\Cambio\MXN.html" />
+    <None Remove="View\Cambio\USD.html" />
+    <None Remove="View\Cartoes\Credito.html" />
+    <None Remove="View\Cartoes\Debito.html" />
+    <None Remove="View\Home\Index.html" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\css\styles.css" />
+    <EmbeddedResource Include="Assets\js\main.js" />
+    <EmbeddedResource Include="View\Cambio\Calculo.html" />
+    <EmbeddedResource Include="View\Cambio\MXN.html" />
+    <EmbeddedResource Include="View\Cambio\USD.html" />
+    <EmbeddedResource Include="View\Cartoes\Credito.html" />
+    <EmbeddedResource Include="View\Cartoes\Debito.html" />
+    <EmbeddedResource Include="View\Home\Index.html" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PortalReflection.Services\PortalReflection.Services.csproj" />
+  </ItemGroup>
+
+</Project>

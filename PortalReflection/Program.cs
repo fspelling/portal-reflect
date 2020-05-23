@@ -1,12 +1,15 @@
-﻿using System;
+﻿using PortalReflection.Console.Infraestrutura;
+using System.Collections.Generic;
 
-namespace PortalReflection
+namespace PortalReflection.Console
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var listaPrefixos = new List<string>() { "http://localhost:5341/" };
+            var webApplication = new WebApplication(listaPrefixos);
+            webApplication.Iniciar();
         }
     }
 }

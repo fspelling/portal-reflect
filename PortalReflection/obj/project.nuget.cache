@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/3Swxt6pk7trxoVaWXtO7Z2dl9YjglJZnhoXg5I48GoVAvRHk2jDJS2BRUYQ0bHksJjtibNExp0Pu5CViMvCVg==",
+  "dgSpecHash": "U9yPLTWz/UVIoXVVoJ047IDpQsPAt/NocfBrNtYilqfEVtYVwkFB4zkbRXwLE5lTG2YBr/7cvDjH4KeQYs+RLw==",
   "success": true,
-  "projectFilePath": "C:\\Projetos\\portal-reflect\\PortalReflection\\PortalReflection.csproj",
+  "projectFilePath": "C:\\Projetos\\portal-reflect\\PortalReflection\\PortalReflection.Console.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

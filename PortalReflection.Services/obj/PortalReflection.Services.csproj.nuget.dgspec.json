@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Projetos\\portal-reflect\\PortalReflection\\PortalReflection.csproj": {}
+    "C:\\Projetos\\portal-reflect\\PortalReflection.Services\\PortalReflection.Services.csproj": {}
   },
   "projects": {
-    "C:\\Projetos\\portal-reflect\\PortalReflection\\PortalReflection.csproj": {
+    "C:\\Projetos\\portal-reflect\\PortalReflection.Services\\PortalReflection.Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projetos\\portal-reflect\\PortalReflection\\PortalReflection.csproj",
-        "projectName": "PortalReflection.Console",
-        "projectPath": "C:\\Projetos\\portal-reflect\\PortalReflection\\PortalReflection.csproj",
+        "projectUniqueName": "C:\\Projetos\\portal-reflect\\PortalReflection.Services\\PortalReflection.Services.csproj",
+        "projectName": "PortalReflection.Services",
+        "projectPath": "C:\\Projetos\\portal-reflect\\PortalReflection.Services\\PortalReflection.Services.csproj",
         "packagesPath": "C:\\Users\\ferna\\.nuget\\packages\\",
-        "outputPath": "C:\\Projetos\\portal-reflect\\PortalReflection\\obj\\",
+        "outputPath": "C:\\Projetos\\portal-reflect\\PortalReflection.Services\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ferna\\AppData\\Roaming\\NuGet\\NuGet.Config",

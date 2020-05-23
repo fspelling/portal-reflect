@@ -1,0 +1,16 @@
+C:\Projetos\portal-reflect\PortalReflection\bin\Debug\netcoreapp3.1\PortalReflection.Console.exe
+C:\Projetos\portal-reflect\PortalReflection\bin\Debug\netcoreapp3.1\PortalReflection.Console.deps.json
+C:\Projetos\portal-reflect\PortalReflection\bin\Debug\netcoreapp3.1\PortalReflection.Console.runtimeconfig.json
+C:\Projetos\portal-reflect\PortalReflection\bin\Debug\netcoreapp3.1\PortalReflection.Console.runtimeconfig.dev.json
+C:\Projetos\portal-reflect\PortalReflection\bin\Debug\netcoreapp3.1\PortalReflection.Console.dll
+C:\Projetos\portal-reflect\PortalReflection\bin\Debug\netcoreapp3.1\PortalReflection.Console.pdb
+C:\Projetos\portal-reflect\PortalReflection\bin\Debug\netcoreapp3.1\PortalReflection.Services.dll
+C:\Projetos\portal-reflect\PortalReflection\bin\Debug\netcoreapp3.1\PortalReflection.Services.pdb
+C:\Projetos\portal-reflect\PortalReflection\obj\Debug\netcoreapp3.1\PortalReflection.Console.csprojAssemblyReference.cache
+C:\Projetos\portal-reflect\PortalReflection\obj\Debug\netcoreapp3.1\PortalReflection.Console.csproj.CoreCompileInputs.cache
+C:\Projetos\portal-reflect\PortalReflection\obj\Debug\netcoreapp3.1\PortalReflection.Console.AssemblyInfoInputs.cache
+C:\Projetos\portal-reflect\PortalReflection\obj\Debug\netcoreapp3.1\PortalReflection.Console.AssemblyInfo.cs
+C:\Projetos\portal-reflect\PortalReflection\obj\Debug\netcoreapp3.1\PortalReflection.Console.csproj.CopyComplete
+C:\Projetos\portal-reflect\PortalReflection\obj\Debug\netcoreapp3.1\PortalReflection.Console.dll
+C:\Projetos\portal-reflect\PortalReflection\obj\Debug\netcoreapp3.1\PortalReflection.Console.pdb
+C:\Projetos\portal-reflect\PortalReflection\obj\Debug\netcoreapp3.1\PortalReflection.Console.genruntimeconfig.cache
