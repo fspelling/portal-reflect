@@ -13,8 +13,9 @@
     <None Remove="View\Cambio\Calculo.html" />
     <None Remove="View\Cambio\MXN.html" />
     <None Remove="View\Cambio\USD.html" />
-    <None Remove="View\Cartoes\Credito.html" />
-    <None Remove="View\Cartoes\Debito.html" />
+    <None Remove="View\Cartao\Credito.html" />
+    <None Remove="View\Cartao\Debito.html" />
+    <None Remove="View\Error\Inesperado.html" />
     <None Remove="View\Home\Index.html" />
   </ItemGroup>
 
@@ -24,8 +25,9 @@
     <EmbeddedResource Include="View\Cambio\Calculo.html" />
     <EmbeddedResource Include="View\Cambio\MXN.html" />
     <EmbeddedResource Include="View\Cambio\USD.html" />
-    <EmbeddedResource Include="View\Cartoes\Credito.html" />
-    <EmbeddedResource Include="View\Cartoes\Debito.html" />
+    <EmbeddedResource Include="View\Cartao\Credito.html" />
+    <EmbeddedResource Include="View\Cartao\Debito.html" />
+    <EmbeddedResource Include="View\Error\Inesperado.html" />
     <EmbeddedResource Include="View\Home\Index.html" />
   </ItemGroup>
 

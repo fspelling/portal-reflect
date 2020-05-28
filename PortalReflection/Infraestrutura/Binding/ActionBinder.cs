@@ -32,7 +32,7 @@ namespace PortalReflection.Console.Infraestrutura.Binding
                 return new ActionBinderInfo(methodInfo, tuplasNomeValor);
             }
         }
-
+        
         private IEnumerable<ArgumentoNomeValor> GetListArgumentoNomeValor(string queryString)
         {
             var tuplasNomeValor = queryString.Split(new char[] { '&' }, StringSplitOptions.RemoveEmptyEntries);

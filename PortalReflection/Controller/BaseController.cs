@@ -1,6 +1,8 @@
 ﻿using System.IO;
+using System.Linq;
 using System.Reflection;
 using System.Runtime.CompilerServices;
+using System.Text.RegularExpressions;
 
 namespace PortalReflection.Console.Controller
 {
@@ -17,6 +19,21 @@ namespace PortalReflection.Console.Controller
             var conteudoTexto = streamReader.ReadToEnd();
 
             return conteudoTexto;
+        }
+
+        protected string View(object model, [CallerMemberName]string nomeArquivo = null)
+        {
+            var view = View(nomeArquivo);
+            var propriedadesAll = model.GetType().GetProperties();
+
+            var regex = new Regex("\\{{(.*?)\\}}");
+            var viewReplace = regex.Replace(view, (match) =>
+            {
+                var propriedadeFilter = propriedadesAll.Single(prop => prop.Name == match.Groups[1].Value);
+                return propriedadeFilter.GetValue(model)?.ToString();
+            });
+
+            return viewReplace;
         }
     }
 }

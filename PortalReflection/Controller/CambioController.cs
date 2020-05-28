@@ -1,47 +1,37 @@
-﻿using PortalReflection.Services;
-using PortalReflection.Services.Cambio;
+﻿using PortalReflection.Console.CustomAttributes;
+using PortalReflection.Services;
 
 namespace PortalReflection.Console.Controller
 {
     public class CambioController : BaseController
     {
-        private ICambioService _service;
+        private ICambioService _serviceCambio;
+        private ICartaoService _serviceCartao;
 
-        public CambioController() => _service = new CambioServiceTest();
-
-        public string MXN()
+        public CambioController(ICambioService serviceCambio, ICartaoService serviceCartao)
         {
-            var valorCalc = _service.calcular("MXN", "BRL", 1);
-
-            var conteudoTexto = View();
-            conteudoTexto = conteudoTexto.Replace("VALOR_REPLACE", valorCalc.ToString());
-
-            return conteudoTexto;
+            _serviceCambio = serviceCambio;
+            _serviceCartao = serviceCartao;
         }
 
-        public string USD()
-        {
-            var valorCalc = _service.calcular("USD", "BRL", 1);
+        [ApenasHorarioComercimalFiltro]
+        public string MXN() => View(new { Valor = _serviceCambio.calcular("MXN", "BRL", 1) });
 
-            var conteudoTexto = View();
-            conteudoTexto = conteudoTexto.Replace("VALOR_REPLACE", valorCalc.ToString());
+        [ApenasHorarioComercimalFiltro]
+        public string USD() => View(new { Valor = _serviceCambio.calcular("USD", "BRL", 1) });
 
-            return conteudoTexto;
-        }
-
-        public string Calculo(string moedaOrigem, string moedaDestino, decimal valor)
-        {
-            var valorCalc = _service.calcular(moedaOrigem, moedaDestino, valor);
-
-            var conteudoTexto = View();
-            conteudoTexto = conteudoTexto.Replace("VALOR_MODEA", valor.ToString())
-                                         .Replace("MOEDA_ORIGEM", moedaOrigem)
-                                         .Replace("MOEDA_DESTINO", moedaDestino)
-                                         .Replace("VALOR_REPLACE", valorCalc.ToString());
-
-            return conteudoTexto;
-        }
-
+        [ApenasHorarioComercimalFiltro]
         public string Calculo(string moedaDestino, decimal valor) => Calculo("BRL", moedaDestino, valor);
+
+        [ApenasHorarioComercimalFiltro]
+        public string Calculo(string moedaOrigem, string moedaDestino, decimal valor) =>
+            View(new
+            {
+                MoedaOrigem = moedaOrigem,
+                ValorMoedaOrigem = valor,
+                MoedaDestino = moedaDestino,
+                ValorMoedaDestino = _serviceCambio.calcular(moedaOrigem, moedaDestino, valor),
+                CartaoPromocao = _serviceCartao.GetCartaoCreditoDestaque()
+            });
     }
 }

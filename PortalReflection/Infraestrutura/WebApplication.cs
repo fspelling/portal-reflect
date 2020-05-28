@@ -1,19 +1,27 @@
-﻿using System;
+﻿using PortalReflection.Console.Infraestrutura.Ioc;
+using PortalReflection.Services;
+using PortalReflection.Services.Cambio;
+using PortalReflection.Services.Cartao;
+using System;
 using System.Collections.Generic;
 using System.Net;
-using System.Reflection;
 
 namespace PortalReflection.Console.Infraestrutura
 {
     public class WebApplication
     {
         private List<string> _prefixos;
+        private readonly IContainer _container = new ContainerSimples();
 
         public WebApplication(List<string> prefixos) => _prefixos = prefixos ?? throw new ArgumentException(nameof(prefixos));
 
         public void Iniciar()
         {
-            while(true) ManipularRequest();
+            // carregar injecao de dependencia(ioc)
+            ConfigurarIoc();
+
+            while (true)
+                ManipularRequest();
         }
 
         private void ManipularRequest()
@@ -28,7 +36,6 @@ namespace PortalReflection.Console.Infraestrutura
             var requisicao = contexto.Request;
             var resposta = contexto.Response;
 
-            var assembly = Assembly.GetExecutingAssembly();
             var path = requisicao.Url.PathAndQuery;
 
             if (Utils.IsArquivo(path))
@@ -38,11 +45,17 @@ namespace PortalReflection.Console.Infraestrutura
             }
             else
             {
-                var manipulador = new ManipuladorRequestController();
+                var manipulador = new ManipuladorRequestController(_container);
                 manipulador.Manipular(resposta, path);
             }
 
             httpListener.Stop();
+        }
+
+        private void ConfigurarIoc()
+        {
+            _container.Registrar<ICambioService, CambioServiceTest>();
+            _container.Registrar<ICartaoService, CartaoServiceTest>();
         }
     }
 }

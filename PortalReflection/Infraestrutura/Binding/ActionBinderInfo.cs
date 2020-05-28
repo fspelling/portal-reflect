@@ -15,7 +15,7 @@ namespace PortalReflection.Console.Infraestrutura.Binding
         {
             MethodInfo = methodInfo ?? throw new ArgumentNullException(nameof(methodInfo));
 
-            if(argumentoValorList == null) throw new ArgumentNullException(nameof(argumentoValorList));
+            if (argumentoValorList == null) throw new ArgumentNullException(nameof(argumentoValorList));
             ArgumentoValorList = new ReadOnlyCollection<ArgumentoNomeValor>(argumentoValorList.ToList());
         }
 
